@@ -15,13 +15,13 @@ jobs:
         python-version: 3.10.13
     - name: Install dependencies
       run: |
-        make install 
+        make install
+    - name: Format code
+      run: |
+        make format
     - name: Lint with pylint
       run: |
         #make lint
     - name: Test with pytest
       run: |
         #make test
-    - name: Format code
-      run: |
-        #make format
