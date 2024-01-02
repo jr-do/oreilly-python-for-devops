@@ -16,6 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         make install
+        python -m textblob.download_corpora
     - name: Format code
       run: |
         make format
@@ -25,3 +26,6 @@ jobs:
     - name: Test with pytest
       run: |
         make test
+    - name: Build Container
+          run: |
+            make build
