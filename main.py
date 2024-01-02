@@ -4,8 +4,6 @@ from mylib.logic import search_wiki
 from mylib.logic import wiki as wikilogic
 from mylib.logic import phrase as wikiphrases
 
-
-
 app = FastAPI()
 
 @app.get("/")
@@ -26,15 +24,8 @@ async def wiki(name: str):
     result = wikilogic(name)
     return {"result": result}
 
-@app.get("/wiki/{name}")
-async def wiki(name: str):
-    """Retrieve a Wikipedia page"""
-
-    result = wikilogic(name)
-    return {"result": result}
-
 @app.get("/phrase/{name}")
-async def wiki(name: str):
+async def phrase(name: str):
     """Retrieve a Wikipedia page and return phrases"""
 
     result = wikiphrases(name)
