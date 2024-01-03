@@ -25,4 +25,4 @@ deploy:
 	docker build -t fastapiwiki .
 	docker tag fastapiwiki:latest 347504412464.dkr.ecr.us-east-1.amazonaws.com/fastapiwiki:latest
 	docker push 347504412464.dkr.ecr.us-east-1.amazonaws.com/fastapiwiki:latest
-all: install lint test deploy
+all: install post-install lint test deploy
